@@ -1,0 +1,51 @@
+{% extends 'portal/base.html' %}    
+{% block content %}
+	{% if post.published_date %}
+		<br/><hr>
+		<table cellpadding="5" cellspacing="0">
+			<tbody>
+				<tr>
+					<td valign="top" width="20">
+						<b><font face="Arial" size="2">{{ post.id }}</font></b>
+					</td>
+					<td colspan="2" align="center">
+						<b><font face="Arial" size="2"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></font></b>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center" valign="top"><font face="Arial"><img src="{{ post.model_pic.url }}" border="" width="450" style="margin-right:50px;"></font>					
+					</td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF"valign="top" width="100"><b><font face="Arial" size="2">Abstract</font></b></td><td valign="top"><font size="2"><font face="Arial">{{ post.abstract_info }}</font></font></td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF" valign="top" width="100"><b><font face="Arial" size="2">Additional Attribute Information</font></b></td><td valign="top"><font size="2"><font face="Arial">{{ post.additional_info }}</font></font></td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF" valign="top" width="100"><b><font face="Arial" size="2">Projection</font></b> </td><td valign="top"><font size="2"><font face="Arial">{{ post.Projection }}</font></font></td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF" valign="top" width="100"><b><font face="Arial" size="2">Theme</font></b> </td><td valign="top"><font size="2"><font face="Arial">{{ post.Theme }}</font></font></td> 
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF" valign="top" width="100"><b><font face="Arial" size="2">Feature type</font></b> </td><td valign="top"><font size="2"><font face="Arial">{{ post.feature_type }}</font></font></td> 
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF" valign="top" width="100"><b><font face="Arial" size="2">Data Source</font></b> </td><td valign="top"><font size="2"><font face="Arial">{{ post.data_source }}</font></font></td> 
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF" valign="top" width="100"><b><font face="Arial" size="2">Map History</font></b> </td><td valign="top"><font size="2"><font face="Arial">{{ post.map_history }}</font></font></td> 
+				</tr>
+				<tr>
+					<td align="right" bgcolor="#FFFFFF" valign="top" width="100"><b><font face="Arial" size="2">Contacts</font></b> </td><td valign="top"><font size="2"><font face="Arial">{{ post.Contact }}</font></font></td> 
+				</tr>			
+			</tbody>
+		</table>
+		<hr>
+	{% endif %}
+{% endblock %}
+
+
+
+
